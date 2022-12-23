@@ -675,7 +675,7 @@ def prepare_data_loader(
             if sampler_is_batch_sampler:
                 sampler = dataloader.sampler.sampler
             else:
-                sampler = dataloader.batch_sampler.sampler
+                sampler = dataloader.batch_sampler
             if hasattr(sampler, "generator"):
                 if sampler.generator is None:
                     sampler.generator = torch.Generator()
